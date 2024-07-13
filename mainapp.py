@@ -5,7 +5,7 @@ import os
 from pydub import AudioSegment
 from flask import Flask, redirect, url_for, render_template, request, send_from_directory, jsonfy
 
-app = Flask(__name__)
+app = Flask(__name__,static_folder='static', template_folder= templates)
 DOWNLOAD_FOLDER = 'downloads'
 if not os.path.exists(DOWNLOAD_FOLDER):
     os.makedirs(DOWNLOAD_FOLDER)
